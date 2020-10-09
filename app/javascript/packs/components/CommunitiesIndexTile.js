@@ -1,9 +1,14 @@
 import React from 'react'
 
 const CommunitiesIndexTile = (props) => {
+  const sendDeleteCommunity = (event) => {
+    event.preventDefault()
+    props.deleteCommunity(props.community.id)
+  }
+
   let deleteButton = <div></div>
   if (props.currentUser !== null && props.currentUser.admin) {
-    deleteButton = <button>Delete Community</button>
+    deleteButton = <button onClick={sendDeleteCommunity}>Delete Community</button>
   }
 
   return (

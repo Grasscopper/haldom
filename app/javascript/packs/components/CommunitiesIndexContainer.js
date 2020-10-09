@@ -13,9 +13,30 @@ const CommunitiesIndexContainer = (props) => {
     })
     .catch(err => console.error(err))
   }, [])
+
+  const deleteCommunity = (communityID) => {
+    fetch(`/api/communities/${communityID}`, {
+      credentials: "same-origin",
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        'Content-Type': "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      setCommunities(body)
+    })
+    .catch(err => console.error(err))
+  }
+
   let communityTiles = communities.map((community) => {
     return (
-      <CommunitiesIndexTile key={community.id} community={community} currentUser={currentUser}/>
+      <CommunitiesIndexTile
+      key={community.id}
+      currentUser={currentUser}
+      community={community}
+      deleteCommunity={deleteCommunity}/>
     )
   })
 

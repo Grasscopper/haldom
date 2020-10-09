@@ -12,6 +12,13 @@ class Api::CommunitiesController < ApplicationController
     end
   end
 
+  def destroy
+    if current_user.admin?
+      Community.find(params["id"]).delete
+      render json: Community.all
+    end
+  end
+
   def community_params
     params.require(:community).permit(:id, :name, :description)
   end
