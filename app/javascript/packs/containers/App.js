@@ -1,5 +1,6 @@
 import React from 'react'
-import CommunitiesIndexContainer from '../components/CommunitiesIndexContainer'
+// import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import CommunitiesIndexContainer from './CommunitiesIndexContainer'
 
 const App = (props) => {
   return (

@@ -1,5 +1,7 @@
 class Api::CommunitiesController < ApplicationController
   def index
+    # anybody can read communities
+    # only admins can create, update, and delete communities
     render json: {
       communities: Community.all,
       currentUser: current_user
