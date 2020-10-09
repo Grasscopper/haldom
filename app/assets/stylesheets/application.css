@@ -1,0 +1,41 @@
+#padding-div {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#haldom-forums-title {
+  color: black;
+  font-size: 32px;
+  margin-bottom: 0px;
+  font-family: Lato; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
+}
+
+#haldom-forums-title:hover {
+  color: gray;
+}
+
+#user-authentication-text {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+#user_name {
+  width: 254px;
+}
+
+#user_email {
+  width: 254px;
+}
+
+#user_password {
+  width: 254px;
+}
+
+#user_password_confirmation {
+  width: 254px;
+}
+
+
+h1 { font-family: Lato; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+h3 { font-family: Lato; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+p { font-family: Lato; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
