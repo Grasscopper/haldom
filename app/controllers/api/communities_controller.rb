@@ -3,7 +3,7 @@ class Api::CommunitiesController < ApplicationController
     # anybody can read communities
     # only admins can create, update, and delete communities
     render json: {
-      communities: Community.all,
+      communities: Community.all.order(:id),
       currentUser: current_user
     }
   end
@@ -18,6 +18,13 @@ class Api::CommunitiesController < ApplicationController
     if current_user.admin?
       Community.find(params["id"]).delete
       render json: Community.all
+    end
+  end
+
+  def update
+    if current_user.admin?
+      Community.find(params["id"]).update(community_params)
+      render json: Community.all.order(:id)
     end
   end
 
