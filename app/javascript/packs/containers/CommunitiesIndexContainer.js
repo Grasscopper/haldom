@@ -106,7 +106,7 @@ const CommunitiesIndexContainer = (props) => {
   }
 
   return (
-    <div>
+    <div className="grid-container">
     <CommunitiesNewComponent
     currentUser={currentUser}
     createCommunity={createCommunity} />
