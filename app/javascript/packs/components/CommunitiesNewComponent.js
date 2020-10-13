@@ -47,7 +47,7 @@ const CommunitiesNewComponent = (props) => {
       value={community.description}
       />
     <br />
-    <button type="submit">Submit</button>
+    <button type="submit">Add Community</button>
     </form>
     </div>
   }
@@ -55,7 +55,6 @@ const CommunitiesNewComponent = (props) => {
   return (
     <>
     {communityForm}
-    <h1>Communities</h1>
     </>
   )
 }
