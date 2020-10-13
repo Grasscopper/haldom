@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const CommunitiesIndexTile = (props) => {
   let [community, setCommunity] = useState({
@@ -61,7 +62,9 @@ const CommunitiesIndexTile = (props) => {
 
   return (
     <div>
-    <h2>{props.community.name}</h2>
+    <Link to={`/communities/${props.community.id}`}>
+      <h2>{props.community.name}</h2>
+    </Link>
     <p>{props.community.description}</p>
     {deleteButton}
     {editForm}

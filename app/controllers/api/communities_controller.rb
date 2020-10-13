@@ -8,6 +8,13 @@ class Api::CommunitiesController < ApplicationController
     }
   end
 
+  def show
+    render json: {
+      community: Community.find(params["id"]),
+      currentUser: current_user
+    }
+  end
+
   def create
     if current_user.admin?
       render json: Community.create(community_params)
