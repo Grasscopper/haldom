@@ -9,8 +9,9 @@ class Api::CommunitiesController < ApplicationController
   end
 
   def show
+    community = Community.find(params["id"])
     render json: {
-      community: Community.find(params["id"]),
+      community: serialized_data(community, CommunitySerializer),
       currentUser: current_user
     }
   end
@@ -33,6 +34,10 @@ class Api::CommunitiesController < ApplicationController
       Community.find(params["id"]).update(community_params)
       render json: Community.all.order(:id)
     end
+  end
+
+  def serialized_data(data, serializer)
+   ActiveModelSerializers::SerializableResource.new(data, serializer: serializer)
   end
 
   def community_params
