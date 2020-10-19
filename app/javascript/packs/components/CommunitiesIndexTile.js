@@ -30,7 +30,7 @@ const CommunitiesIndexTile = (props) => {
   const sendEditCommunity = (event) => {
     event.preventDefault()
     props.editCommunity(props.community.id, community)
-    clearForm()
+    // clearForm()
   }
 
   let deleteButton = <div></div>
