@@ -31,7 +31,7 @@ const TopicsNewComponent = (props) => {
   let topicForm = <div></div>
   if (props.currentUser !== null) {
     topicForm = <div>
-    <h1>Add Topic</h1>
+    <h2>Add Topic</h2>
     <form onSubmit={sendCreateTopic} autoComplete="off">
     <label htmlFor="name">Name</label>
     <input
@@ -41,13 +41,12 @@ const TopicsNewComponent = (props) => {
       value={topic.name}
     />
     <label htmlFor="description">Description</label>
-    <input
+    <textarea
       id="description"
       name="description"
       onChange={update}
       value={topic.description}
       />
-    <br />
     <button type="submit">Add Topic</button>
     </form>
     </div>

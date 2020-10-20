@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Haldom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= render 'application/favicon' %>
@@ -9,7 +10,7 @@
   </head>
 
   <body>
-    <div class="grid-container">
+    <div class="grid-container" id="master-grid-container">
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>

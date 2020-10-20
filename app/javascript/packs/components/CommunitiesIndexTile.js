@@ -49,7 +49,7 @@ const CommunitiesIndexTile = (props) => {
       value={community.name}
     />
     <label htmlFor="description">Description</label>
-    <input
+    <textarea
       id="description"
       name="description"
       onChange={update}
@@ -61,13 +61,13 @@ const CommunitiesIndexTile = (props) => {
   }
 
   return (
-    <div>
+    <div className="community-tile-div">
     <Link to={`/communities/${props.community.id}`}>
-      <h2>{props.community.name}</h2>
+      <h1 className="community-tile-name">{props.community.name}</h1>
     </Link>
     <p>{props.community.description}</p>
-    {deleteButton}
     {editForm}
+    {deleteButton}
     </div>
   )
 }

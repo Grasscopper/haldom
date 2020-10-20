@@ -45,13 +45,14 @@ const CommunitiesShowPage = (props) => {
   })
 
   return (
-    <div className="grid-container">
-    <h2>{community.name}</h2>
+    <div className="grid-container" id="communities-show-container">
+    <h1>{community.name}</h1>
     <p>{community.description}</p>
     <TopicsNewComponent
       currentUser={currentUser}
       communityID={props.match.params.id}
       createTopic={createTopic}/>
+    <h2 id="topics">Topics</h2>
     {topicTiles}
     </div>
   )
