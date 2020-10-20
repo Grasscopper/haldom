@@ -40,13 +40,13 @@ const CommunitiesNewComponent = (props) => {
       value={community.name}
     />
     <label htmlFor="description">Description</label>
-    <input
+    <textarea
+      draggable="false"
       id="description"
       name="description"
       onChange={update}
       value={community.description}
-      />
-    <br />
+    />
     <button type="submit">Add Community</button>
     </form>
     </div>

@@ -106,15 +106,15 @@ const CommunitiesIndexContainer = (props) => {
   }
 
   return (
-    <div className="grid-container">
+    <div className="grid-container" id="communities-index-container">
     <CommunitiesNewComponent
     currentUser={currentUser}
     createCommunity={createCommunity} />
-    <h1>Communities</h1>
+    <h1 id="communities-title">Communities</h1>
     {editButton}
-    <br/>
     {deleteButton}
     {communityTiles}
+    <img src="https://gtswiki.gt-beginners.net/decal/png/64/54/91/8287209360504915464_1.png" alt="Jack Frost from Persona" />
     </div>
   )
 }
