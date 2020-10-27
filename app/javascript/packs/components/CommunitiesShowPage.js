@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import TopicsIndexTile from './TopicsIndexTile'
 import TopicsNewComponent from './TopicsNewComponent'
 
 const CommunitiesShowPage = (props) => {
-  let [currentUser, setCurrentUser] = useState()
+  let [currentUser, setCurrentUser] = useState({})
   let [community, setCommunity] = useState({
     name: "",
     description: "",
@@ -46,7 +47,9 @@ const CommunitiesShowPage = (props) => {
 
   return (
     <div className="grid-container" id="communities-show-container">
-    <h1>{community.name}</h1>
+    <Link to="/communities">
+      <h1 className="community-tile-name">{community.name}</h1>
+    </Link>
     <p>{community.description}</p>
     <TopicsNewComponent
       currentUser={currentUser}
