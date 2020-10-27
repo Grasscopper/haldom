@@ -22,6 +22,7 @@ const CommunitiesShowPage = (props) => {
   }, [])
 
   const createTopic = (topic) => {
+    topic.community_id = props.match.params.id
     fetch('/api/topics', {
       credentials: "same-origin",
       method: "POST",
@@ -53,7 +54,6 @@ const CommunitiesShowPage = (props) => {
     <p>{community.description}</p>
     <TopicsNewComponent
       currentUser={currentUser}
-      communityID={props.match.params.id}
       createTopic={createTopic}/>
     <h2 id="topics">Topics</h2>
     {topicTiles}
