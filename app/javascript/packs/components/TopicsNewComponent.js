@@ -4,7 +4,7 @@ const TopicsNewComponent = (props) => {
   let [topic, setTopic] = useState({
     name: "",
     description: "",
-    community_id: props.communityID
+    community_id: ""
   })
 
   const sendCreateTopic = (event) => {
