@@ -21,6 +21,20 @@ button {
   background-color: #FFEC51;
   border: solid;
 }
+.img-div {
+  text-align: center;
+}
+
+.poster {
+  color: gray;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.topic-description {
+  margin-bottom: 20px;
+}
 
 /* start top bar */
 
@@ -88,6 +102,7 @@ a:hover {
 }
 
 .topic-tile-name {
+  margin-bottom: 0px;
   font-weight: 700;
 }
 
@@ -97,8 +112,10 @@ a {
 }
 
 textarea {
-  width: 315px;
-  height: 88px;
+  width: 630px;
+  /* 315 */
+  height: 176px;
+  /* 88 */
   resize: none;
   margin-bottom: 0px;
 }
