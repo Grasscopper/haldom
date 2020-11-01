@@ -48,14 +48,17 @@ const CommunitiesShowPage = (props) => {
 
   return (
     <div className="grid-container" id="communities-show-container">
-    <Link to="/communities">
-      <h1 className="community-tile-name">{community.name}</h1>
-    </Link>
-    <p>{community.description}</p>
+    <h1 id="communities-title">Community</h1>
+    <div className="community-tile-div" id="community-show-div">
+      <Link to="/communities">
+        <h1 className="community-tile-name">{community.name}</h1>
+      </Link>
+      <p>{community.description}</p>
+    </div>
     <TopicsNewComponent
       currentUser={currentUser}
       createTopic={createTopic}/>
-    <h2 id="topics">Topics</h2>
+    <h1 id="topics">Topics</h1>
     {topicTiles}
     </div>
   )

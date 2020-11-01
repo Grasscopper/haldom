@@ -5,6 +5,11 @@ html {
 
 body {
   background-color: #AED7E1;
+  /* background-image: url("https://steamuserimages-a.akamaihd.net/ugc/493520011191681029/A617FF45CC636AEA3FBAAFD9F680CF4657FCF3C4/");
+  background-size: cover;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-attachment: fixed; */
 }
 
 h1 { font-family: Lato; font-size: 36px; font-style: normal; font-variant: normal; line-height: 32px; }
@@ -20,6 +25,7 @@ button {
   height: 25px;
   background-color: #FFEC51;
   border: solid;
+  margin-right: 10px;
 }
 .img-div {
   text-align: center;
@@ -37,6 +43,12 @@ button {
 }
 
 /* start top bar */
+
+/* entire top bar */
+.top-bar {
+  /* background-color: #367AB2; */
+  background-color: white;
+}
 
 /* top bar left */
 #haldom-forums-title {
@@ -59,10 +71,6 @@ button {
 
 /* end top bar */
 
-.top-bar {
-  background-color: #367AB2;
-}
-
 a:hover {
   color: #AED7E1;
 }
@@ -73,42 +81,77 @@ a:hover {
   border: solid;
 }
 
-/* Container below tool bar */
-#communities-index-container {
-  padding: 30px;
+#communities-show-container {
+  padding: 15px;
   border: solid;
   border-top: none;
-  background-color: white;
+  background-color: #E3F2FD;
 }
 
-#communities-show-container {
-  padding: 30px;
+#community-show-div {
   border: solid;
-  border-top: none;
-  background-color: white;
+  border-color: #686963;
 }
 
 #topics {
   margin-top: 10px;
+  padding: 6px;
   border-bottom: solid;
 }
 
+/* Communities Index Page Start */
+
+/* Container for bottom 2 elements */
+#communities-index-container {
+  padding: 15px;
+  border: solid;
+  border-top: none;
+  background-color: #E3F2FD;
+}
+
+/* Communities Header */
 #communities-title {
+  /* background-color: #FAFAFA; */
+  padding: 3px;
   border-bottom: solid;
 }
 
-.community-tile-name {
-  font-family: Lato; font-size: 32px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 32px;
+/* Community Tile Enclosing Div */
+.community-tile-div {
+  background-color: #FAFAFA;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid;
+  border-color: #8AA29E;
 }
+
+/* Community Tile Name */
+.community-tile-name {
+  font-family: Lato; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 32px;
+}
+
+/* Communities Index Page End */
 
 .topic-tile-name {
   margin-bottom: 0px;
   font-weight: 700;
 }
 
+.topic-tile {
+  background-color: #FAFAFA;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid;
+  border-color: #8AA29E;
+}
+
 a {
   color: black;
   font-style: normal;
+}
+
+input {
+  width: 630px;
 }
 
 textarea {

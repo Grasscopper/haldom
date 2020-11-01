@@ -32,7 +32,7 @@ const CommunitiesNewComponent = (props) => {
     communityForm = <div>
     <h1>Add Community</h1>
     <form onSubmit={sendCreateCommunity} autoComplete="off">
-    <label htmlFor="name">Name</label>
+    <label htmlFor="name">Title</label>
     <input
       id="name"
       name="name"
