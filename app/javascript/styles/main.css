@@ -150,7 +150,11 @@ a {
   font-style: normal;
 }
 
-input {
+#name {
+  width: 630px;
+}
+
+#description {
   width: 630px;
 }
 
