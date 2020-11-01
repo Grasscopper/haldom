@@ -33,7 +33,7 @@ const TopicsNewComponent = (props) => {
     topicForm = <div>
     <h2>Add Topic</h2>
     <form onSubmit={sendCreateTopic} autoComplete="off">
-    <label htmlFor="name">Name</label>
+    <label htmlFor="name">Title</label>
     <input
       id="name"
       name="name"
