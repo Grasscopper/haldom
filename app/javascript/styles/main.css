@@ -27,6 +27,11 @@ button {
   border: solid;
   margin-right: 10px;
 }
+
+.topic-delete-button {
+  background-color: #DB5461;
+}
+
 .img-div {
   text-align: center;
 }
@@ -140,7 +145,6 @@ a:hover {
 }
 
 .topic-tile {
-  /* background-color: #FAFAFA; */
   background-color: white;
   padding: 10px;
   margin-bottom: 10px;
@@ -154,11 +158,15 @@ a {
 }
 
 #name {
-  width: 630px;
+  width: 315px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #description {
   width: 630px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 textarea {
