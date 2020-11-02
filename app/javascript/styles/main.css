@@ -90,7 +90,8 @@ a:hover {
 
 #community-show-div {
   border: solid;
-  border-color: #686963;
+  /* border-color: #686963; */
+  border-color: #8AA29E
 }
 
 #topics {
@@ -118,7 +119,8 @@ a:hover {
 
 /* Community Tile Enclosing Div */
 .community-tile-div {
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
+  background-color: white;
   padding: 10px;
   margin-bottom: 10px;
   border: solid;
@@ -138,7 +140,8 @@ a:hover {
 }
 
 .topic-tile {
-  background-color: #FAFAFA;
+  /* background-color: #FAFAFA; */
+  background-color: white;
   padding: 10px;
   margin-bottom: 10px;
   border: solid;
