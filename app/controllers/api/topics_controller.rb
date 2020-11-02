@@ -5,9 +5,18 @@ class Api::TopicsController < ApplicationController
   def create
     if user_signed_in?
       topic = Topic.new(topic_params)
+      topic.update(user: current_user)
       topic.update(poster: current_user.user_name)
       topic.save
       render json: Community.find(params["community_id"])
+    end
+  end
+
+  def destroy
+    if user_signed_in?
+      topics = Topic.find(params["id"]).community.topics
+      current_user.topics.find(params["id"]).delete
+      render json: topics.order(:created_at)
     end
   end
 

@@ -10,6 +10,12 @@ const CommunitiesShowPage = (props) => {
     description: "",
     topics: []
   })
+  let [topicDeleting, setTopicDeleting] = useState(false)
+
+  const changeDeleting = (event) => {
+    event.preventDefault()
+    setTopicDeleting(!topicDeleting)
+  }
 
   useEffect(() => {
     fetch(`/api/communities/${props.match.params.id}`)
@@ -40,11 +46,46 @@ const CommunitiesShowPage = (props) => {
     .catch(err => console.error(err))
   }
 
+  const deleteTopic = (topicID) => {
+    fetch(`/api/topics/${topicID}`, {
+      credentials: "same-origin",
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        'Content-Type': "application/json"
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      setCommunity({
+        name: community.name,
+        description: community.description,
+        topics: body
+      })
+    })
+    .catch(err => console.error(err))
+  }
+
   let topicTiles = community.topics.map((topic) => {
     return (
-      <TopicsIndexTile key={topic.id} topic={topic} />
+      <TopicsIndexTile
+        key={topic.id}
+        currentUser={currentUser}
+        topic={topic}
+        deleteTopic={deleteTopic}
+        topicDeleting={topicDeleting} />
     )
   })
+
+  let deleteTopics = <div></div>
+  if (currentUser !== null) {
+    if (topicDeleting) {
+      deleteTopics = <button onClick={changeDeleting} className="topic-delete-button">Now Deleting</button>
+    }
+    else {
+      deleteTopics = <button onClick={changeDeleting}>Delete Topics</button>
+    }
+  }
 
   return (
     <div className="grid-container" id="communities-show-container">
@@ -57,8 +98,9 @@ const CommunitiesShowPage = (props) => {
     </div>
     <TopicsNewComponent
       currentUser={currentUser}
-      createTopic={createTopic}/>
+      createTopic={createTopic} />
     <h1 id="topics">Topics</h1>
+    {deleteTopics}
     {topicTiles}
     </div>
   )

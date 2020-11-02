@@ -3,7 +3,7 @@ class Api::CommunitiesController < ApplicationController
   # only admins can create, update, and delete communities
   def index
     render json: {
-      communities: Community.all.order(:id),
+      communities: Community.all.order(:created_at),
       currentUser: current_user
     }
   end
@@ -25,14 +25,14 @@ class Api::CommunitiesController < ApplicationController
   def destroy
     if current_user.admin?
       Community.find(params["id"]).delete
-      render json: Community.all
+      render json: Community.all.order(:created_at)
     end
   end
 
   def update
     if current_user.admin?
       Community.find(params["id"]).update(community_params)
-      render json: Community.all.order(:id)
+      render json: Community.all.order(:created_at)
     end
   end
 
