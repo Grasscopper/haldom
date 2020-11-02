@@ -13,7 +13,11 @@ class Api::TopicsController < ApplicationController
   end
 
   def destroy
-    if user_signed_in?
+    if current_user.admin?
+      topics = Topic.find(params["id"]).community.topics
+      Topic.find(params["id"]).delete
+      render json: topics.order(:created_at)
+    else user_signed_in?
       topics = Topic.find(params["id"]).community.topics
       current_user.topics.find(params["id"]).delete
       render json: topics.order(:created_at)
