@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 const CommunitiesNewComponent = (props) => {
   let [community, setCommunity] = useState({
     name: "",
-    description: ""
+    description: "",
+    image: ""
   })
 
   const update = (event) => {
@@ -17,7 +18,8 @@ const CommunitiesNewComponent = (props) => {
   const clearForm = () => {
     setCommunity({
       name: "",
-      description: ""
+      description: "",
+      image: ""
     })
   }
 
@@ -47,6 +49,14 @@ const CommunitiesNewComponent = (props) => {
       onChange={update}
       value={community.description}
     />
+    <label htmlFor="image">Image</label>
+    <input
+      id="image"
+      name="image"
+      onChange={update}
+      value={community.image}
+    />
+    <br />
     <button type="submit">Add Community</button>
     </form>
     </div>
