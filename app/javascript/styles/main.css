@@ -94,10 +94,25 @@ a:hover {
   min-width: 100%;
 }
 
+#persona {
+  min-width: 100%;
+  margin-bottom: 0px;
+}
+
 #communities-show-container {
   padding: 15px;
-  border: solid;
+  padding-left: 0px;
+  padding-right: 0px;
   border-top: none;
+  border: none;
+  background-color: #E3F2FD;
+}
+
+#communities-blue-container {
+  padding: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: solid;
   border: none;
   background-color: #E3F2FD;
 }
@@ -112,7 +127,7 @@ a:hover {
 #topics {
   margin-top: 10px;
   padding: 6px;
-  border-bottom: solid;
+  border-bottom: none;
 }
 
 /* Communities Index Page Start */
@@ -132,7 +147,13 @@ a:hover {
   padding: 3px;
   padding-top: 6px;
   margin-top: 0px;
-  height: 50px;
+  line-height: 30px;
+}
+
+#communities-title-div {
+  background-color: white;
+  padding: 6px;
+  text-align: center;
 }
 
 /* Community Tile Enclosing Div */
@@ -155,19 +176,25 @@ a:hover {
   font-family: Lato; font-size: 24px; font-style: normal; font-variant: normal; font-weight: normal; line-height: 32px;
 }
 
+#hide-text-highlight {
+  color: black;
+}
+
 /* Communities Index Page End */
 
 .topic-tile-name {
   margin-bottom: 0px;
-  font-weight: 700;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
 .topic-tile {
   background-color: white;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 10px;
-  border: solid;
-  border-color: #8AA29E;
+  border: none;
+  /* border-color: #8AA29E; */
+  box-shadow: 0 0 9px rgb(138 162 158);
 }
 
 a {

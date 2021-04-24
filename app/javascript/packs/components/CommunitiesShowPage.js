@@ -89,10 +89,10 @@ const CommunitiesShowPage = (props) => {
 
   return (
     <div className="grid-container" id="communities-show-container">
-    <Link to="/communities">
-    <h1 id="communities-title">{community.name}</h1>
-    </Link>
       <div className="community-tile-div" id="community-show-div">
+      <Link to="/communities">
+      <h1 id="communities-title">{community.name}</h1>
+      </Link>
       <img src={community.image} />
         <p>{community.description}</p>
       </div>
@@ -102,6 +102,7 @@ const CommunitiesShowPage = (props) => {
       <h1 id="topics">Topics</h1>
       {deleteTopics}
       {topicTiles}
+      <img src="https://gtswiki.gt-beginners.net/decal/png/64/54/91/8287209360504915464_1.png" alt="Jack Frost from Persona" />
     </div>
   )
 }

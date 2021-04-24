@@ -69,15 +69,17 @@ const CommunitiesIndexTile = (props) => {
 
   return (
     <div className="community-tile-div">
-    <Link to={`/communities/${props.community.id}`}>
-    <div className="image-div">
-    <img src={props.community.image} />
-    </div>
-      <h1 className="community-tile-name">{props.community.name}</h1>
-    <p>{props.community.description}</p>
-    </Link>
-    {editForm}
-    {deleteButton}
+      <Link to={`/communities/${props.community.id}`}>
+        <div className="image-div">
+          <img src={props.community.image} />
+        </div>
+        <div id="hide-text-highlight">
+          <h1 className="community-tile-name">{props.community.name}</h1>
+          <p>{props.community.description}</p>
+        </div>
+      </Link>
+      {editForm}
+      {deleteButton}
     </div>
   )
 }
