@@ -106,16 +106,21 @@ const CommunitiesIndexContainer = (props) => {
   }
 
   return (
+    <>
+    <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/hero/185e65bc40581880c4f2c82958de8cfe.png" alt="Persona 3 Banner" id="persona" />
+    <div id="communities-title-div">
+    <h2 id="communities-title">Welcome to Haldom! A community to discuss all your favourite games, stories, anime, and more.</h2>
+    </div>
     <div className="grid-container" id="communities-index-container">
     <CommunitiesNewComponent
     currentUser={currentUser}
     createCommunity={createCommunity} />
-    <h1 id="communities-title">Communities</h1>
     {editButton}
     {deleteButton}
     {communityTiles}
     <img src="https://gtswiki.gt-beginners.net/decal/png/64/54/91/8287209360504915464_1.png" alt="Jack Frost from Persona" />
     </div>
+    </>
   )
 }
 
