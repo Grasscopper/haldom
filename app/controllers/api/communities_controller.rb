@@ -41,6 +41,6 @@ class Api::CommunitiesController < ApplicationController
   end
 
   def community_params
-    params.require(:community).permit(:id, :name, :description)
+    params.require(:community).permit(:id, :name, :description, :image)
   end
 end

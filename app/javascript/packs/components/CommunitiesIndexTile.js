@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 const CommunitiesIndexTile = (props) => {
   let [community, setCommunity] = useState({
     name: props.community.name,
-    description: props.community.description
+    description: props.community.description,
+    image: props.community.image
   })
 
   const update = (event) => {
@@ -54,6 +55,13 @@ const CommunitiesIndexTile = (props) => {
       onChange={update}
       value={community.description}
       />
+    <label htmlFor="image">Image</label>
+    <input
+      id="image"
+      name="image"
+      onChange={update}
+      value={community.image}
+    />
     <br />
     <button type="submit">Edit</button>
     </form>
@@ -62,9 +70,12 @@ const CommunitiesIndexTile = (props) => {
   return (
     <div className="community-tile-div">
     <Link to={`/communities/${props.community.id}`}>
+    <div className="image-div">
+    <img src={props.community.image} />
+    </div>
       <h1 className="community-tile-name">{props.community.name}</h1>
-    </Link>
     <p>{props.community.description}</p>
+    </Link>
     {editForm}
     {deleteButton}
     </div>

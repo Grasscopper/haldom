@@ -12,7 +12,7 @@ body {
   background-attachment: fixed; */
 }
 
-h1 { font-family: Arial; font-size: 36px; font-style: normal; font-variant: normal; line-height: 32px; }
+h1 { font-family: Lato; font-size: 36px; font-style: normal; font-variant: normal; line-height: 32px; }
 h2 { font-family: Arial; font-size: 27px; font-style: normal; font-variant: normal; line-height: 27px; }
 h3 { font-family: Arial; font-size: 22px; font-style: normal; font-variant: normal; line-height: 22px; }
 p { font-family: Arial; font-size: 18px; font-style: normal; font-variant: normal; line-height: 20px; }
@@ -28,12 +28,19 @@ button {
   margin-right: 10px;
 }
 
-.topic-delete-button {
-  background-color: #DB5461;
+img {
+  max-height: 500px;
+  margin-bottom: 12px;
 }
 
-.img-div {
-  text-align: center;
+/* #banner {
+  width: 100%;
+  height: 244px;
+  margin-bottom: 0px;
+} */
+
+.topic-delete-button {
+  background-color: #DB5461;
 }
 
 .poster {
@@ -91,13 +98,15 @@ a:hover {
   padding: 15px;
   border: solid;
   border-top: none;
+  border: none;
   background-color: #E3F2FD;
 }
 
 #community-show-div {
-  border: solid;
+  /* border: solid; */
   /* border-color: #686963; */
-  border-color: #8AA29E
+  /* border-color: #8AA29E; */
+  opacity: 1;
 }
 
 #topics {
@@ -120,8 +129,10 @@ a:hover {
 
 /* Communities Header */
 #communities-title {
-  /* background-color: #FAFAFA; */
   padding: 3px;
+  padding-top: 6px;
+  margin-top: 0px;
+  height: 50px;
 }
 
 /* Community Tile Enclosing Div */
@@ -129,15 +140,19 @@ a:hover {
   /* background-color: #FAFAFA; */
   background-color: white;
   padding: 10px;
-  margin-bottom: 10px;
-  border: solid;
-  border-color: #8AA29E;
+  margin-bottom: 15px;
   border: none;
+  /* box-shadow: 0 0 16px rgb(0 0 0 / 30%); */
+  box-shadow: 0 0 9px rgb(138 162 158);
+}
+
+.community-tile-div:hover {
+  opacity: 0.90;
 }
 
 /* Community Tile Name */
 .community-tile-name {
-  font-family: Lato; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 32px;
+  font-family: Lato; font-size: 24px; font-style: normal; font-variant: normal; font-weight: normal; line-height: 32px;
 }
 
 /* Communities Index Page End */
@@ -168,6 +183,13 @@ a {
 
 #description {
   width: 630px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* not for pictures, but for writing the image url in a form */
+#image {
+  width: 315px;
   box-sizing: border-box;
   width: 100%;
 }
